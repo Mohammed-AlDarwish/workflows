@@ -8,7 +8,7 @@ class Workflow extends Model
 {
     private $data;
 
-    protected $table = 'workflows';
+    protected $table = 'workflow_workflows';
 
     protected $fillable = [
         'name',

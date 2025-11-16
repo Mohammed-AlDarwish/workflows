@@ -13,7 +13,7 @@ class CreateWorkflowsTable extends Migration
      */
     public function up()
     {
-        Schema::create(config('workflows.db_prefix').'workflows', function (Blueprint $table) {
+        Schema::create(config('workflows.db_prefix').'workflow_workflows', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->timestamps();
@@ -27,6 +27,6 @@ class CreateWorkflowsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(config('workflows.db_prefix').'workflows');
+        Schema::dropIfExists(config('workflows.db_prefix').'workflow_workflows');
     }
 }

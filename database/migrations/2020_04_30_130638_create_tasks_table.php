@@ -13,7 +13,7 @@ class CreateTasksTable extends Migration
      */
     public function up()
     {
-        Schema::create(config('workflows.db_prefix').'tasks', function (Blueprint $table) {
+        Schema::create(config('workflows.db_prefix').'workflow_tasks', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('workflow_id')->index();
             $table->bigInteger('parentable_id')->nullable()->index();
@@ -36,6 +36,6 @@ class CreateTasksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(config('workflows.db_prefix').'tasks');
+        Schema::dropIfExists(config('workflows.db_prefix').'workflow_tasks');
     }
 }

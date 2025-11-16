@@ -15,7 +15,7 @@ class Task extends Model implements TaskInterface
 {
     use DataBussable, Fieldable;
 
-    protected $table = 'tasks';
+    protected $table = 'workflow_tasks';
 
     public $family = 'task';
 

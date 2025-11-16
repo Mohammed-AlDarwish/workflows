@@ -15,23 +15,23 @@ class UpdateCascadeDelete extends Migration
     {
         Schema::table(config('workflows.db_prefix').'task_logs', function (Blueprint $table) {
             $table->bigInteger('task_id')->unsigned()->change();
-            $table->foreign('task_id')->references('id')->on(config('workflows.db_prefix').'tasks')->onDelete('cascade');
+            $table->foreign('task_id')->references('id')->on(config('workflows.db_prefix').'workflow_tasks')->onDelete('cascade');
         });
 
-        Schema::table(config('workflows.db_prefix').'tasks', function (Blueprint $table) {
+        Schema::table(config('workflows.db_prefix').'workflow_tasks', function (Blueprint $table) {
             $table->dropIndex(['workflow_id']);
             $table->bigInteger('workflow_id')->unsigned()->change();
-            $table->foreign('workflow_id')->references('id')->on(config('workflows.db_prefix').'workflows')->onDelete('cascade');
+            $table->foreign('workflow_id')->references('id')->on(config('workflows.db_prefix').'workflow_workflows')->onDelete('cascade');
         });
 
         Schema::table(config('workflows.db_prefix').'triggers', function (Blueprint $table) {
             $table->bigInteger('workflow_id')->unsigned()->change();
-            $table->foreign('workflow_id')->references('id')->on(config('workflows.db_prefix').'workflows')->onDelete('cascade');
+            $table->foreign('workflow_id')->references('id')->on(config('workflows.db_prefix').'workflow_workflows')->onDelete('cascade');
         });
 
         Schema::table(config('workflows.db_prefix').'workflow_logs', function (Blueprint $table) {
             $table->bigInteger('workflow_id')->unsigned()->change();
-            $table->foreign('workflow_id')->references('id')->on(config('workflows.db_prefix').'workflows')->onDelete('cascade');
+            $table->foreign('workflow_id')->references('id')->on(config('workflows.db_prefix').'workflow_workflows')->onDelete('cascade');
         });
     }
 
@@ -42,7 +42,7 @@ class UpdateCascadeDelete extends Migration
      */
     public function down()
     {
-        Schema::table(config('workflows.db_prefix').'tasks', function (Blueprint $table) {
+        Schema::table(config('workflows.db_prefix').'workflow_tasks', function (Blueprint $table) {
             $table->dropForeign(['workflow_id']);
         });
 

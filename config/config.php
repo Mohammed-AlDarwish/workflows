@@ -23,17 +23,17 @@ return [
     |
     */
     'tasks' => [
-        'SendMail' => the42coders\Workflows\Tasks\SendMail::class,
-        'Execute' => the42coders\Workflows\Tasks\Execute::class,
-        'PregReplace' => the42coders\Workflows\Tasks\PregReplace::class,
-        'HtmlInput' => the42coders\Workflows\Tasks\HtmlInput::class,
-        'DomPDF' => the42coders\Workflows\Tasks\DomPDF::class,
-        'HttpStatus' => the42coders\Workflows\Tasks\HttpStatus::class,
-        'LoadModel' => the42coders\Workflows\Tasks\LoadModel::class,
-        'ChangeModel' => the42coders\Workflows\Tasks\ChangeModel::class,
-        'SaveModel' => the42coders\Workflows\Tasks\SaveModel::class,
-        'SendSlackMessage' => the42coders\Workflows\Tasks\SendSlackMessage::class,
-        'TextInput' => the42coders\Workflows\Tasks\TextInput::class,
+        'SendMail' => mohammed_aldarwish\Workflows\Tasks\SendMail::class,
+        'Execute' => mohammed_aldarwish\Workflows\Tasks\Execute::class,
+        'PregReplace' => mohammed_aldarwish\Workflows\Tasks\PregReplace::class,
+        'HtmlInput' => mohammed_aldarwish\Workflows\Tasks\HtmlInput::class,
+        'DomPDF' => mohammed_aldarwish\Workflows\Tasks\DomPDF::class,
+        'HttpStatus' => mohammed_aldarwish\Workflows\Tasks\HttpStatus::class,
+        'LoadModel' => mohammed_aldarwish\Workflows\Tasks\LoadModel::class,
+        'ChangeModel' => mohammed_aldarwish\Workflows\Tasks\ChangeModel::class,
+        'SaveModel' => mohammed_aldarwish\Workflows\Tasks\SaveModel::class,
+        'SendSlackMessage' => mohammed_aldarwish\Workflows\Tasks\SendSlackMessage::class,
+        'TextInput' => mohammed_aldarwish\Workflows\Tasks\TextInput::class,
     ],
 
     'task_settings' => [
@@ -54,10 +54,10 @@ return [
     |
     */
     'data_resources' => [
-        'ValueResource' => the42coders\Workflows\DataBuses\ValueResource::class,
-        'ModelResource' => the42coders\Workflows\DataBuses\ModelResource::class,
-        'DataResource' => the42coders\Workflows\DataBuses\DataBusResource::class,
-        'ConfigResource' => the42coders\Workflows\DataBuses\ConfigResource::class,
+        'ValueResource' => mohammed_aldarwish\Workflows\DataBuses\ValueResource::class,
+        'ModelResource' => mohammed_aldarwish\Workflows\DataBuses\ModelResource::class,
+        'DataResource' => mohammed_aldarwish\Workflows\DataBuses\DataBusResource::class,
+        'ConfigResource' => mohammed_aldarwish\Workflows\DataBuses\ConfigResource::class,
     ],
 
     /*
@@ -80,8 +80,8 @@ return [
     'triggers' => [
 
         'types' => [
-            'ObserverTrigger' => the42coders\Workflows\Triggers\ObserverTrigger::class,
-            'ButtonTrigger' => the42coders\Workflows\Triggers\ButtonTrigger::class,
+            'ObserverTrigger' => mohammed_aldarwish\Workflows\Triggers\ObserverTrigger::class,
+            'ButtonTrigger' => mohammed_aldarwish\Workflows\Triggers\ButtonTrigger::class,
         ],
 
         'Observers' => [
@@ -101,7 +101,7 @@ return [
             ],
             'classes' => [
                 \App\Models\User::class => 'User',
-                \the42coders\Workflows\Loggers\WorkflowLog::class => 'WorkflowLog',
+                \mohammed_aldarwish\Workflows\Loggers\WorkflowLog::class => 'WorkflowLog',
             ],
         ],
         'Button' => [

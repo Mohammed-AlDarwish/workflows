@@ -1,15 +1,15 @@
 <?php
 
-namespace the42coders\Workflows\Http\Controllers;
+namespace mohammed_aldarwish\Workflows\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use the42coders\Workflows\Loggers\WorkflowLog;
-use the42coders\Workflows\Tasks\Task;
-use the42coders\Workflows\Triggers\ReRunTrigger;
-use the42coders\Workflows\Triggers\Trigger;
+use mohammed_aldarwish\Workflows\Loggers\WorkflowLog;
+use mohammed_aldarwish\Workflows\Tasks\Task;
+use mohammed_aldarwish\Workflows\Triggers\ReRunTrigger;
+use mohammed_aldarwish\Workflows\Triggers\Trigger;
 //use App\Http\Controllers\Controller;
-use the42coders\Workflows\Workflow;
+use mohammed_aldarwish\Workflows\Workflow;
 
 class WorkflowController extends Controller
 {
@@ -298,7 +298,7 @@ class WorkflowController extends Controller
         }
 
         if (in_array($request->resource, config('workflows.data_resources'))) {
-            $className = $request->resource ?? 'the42coders\\Workflows\\DataBuses\\ValueResource';
+            $className = $request->resource ?? 'mohammed_aldarwish\\Workflows\\DataBuses\\ValueResource';
             $resource = new $className();
             $html = $resource->loadResourceIntelligence($element, $request->value, $request->field_name);
         }

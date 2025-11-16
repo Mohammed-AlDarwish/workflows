@@ -1,9 +1,9 @@
 <?php
 
-namespace the42coders\Workflows\Tasks;
+namespace mohammed_aldarwish\Workflows\Tasks;
 
 use Illuminate\Support\Facades\Notification;
-use the42coders\Workflows\Notifications\SlackNotification;
+use mohammed_aldarwish\Workflows\Notifications\SlackNotification;
 
 class SendSlackMessage extends Task
 {

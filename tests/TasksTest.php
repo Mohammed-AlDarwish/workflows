@@ -1,19 +1,19 @@
 <?php
 
-namespace the42coders\Workflows\Tests;
+namespace mohammed_aldarwish\Workflows\Tests;
 
 use Illuminate\Support\Facades\Config;
-use the42coders\Workflows\DataBuses\DataBus;
-use the42coders\Workflows\Loggers\WorkflowLog;
-use the42coders\Workflows\Tasks\DomPDF;
-use the42coders\Workflows\Tasks\Execute;
-use the42coders\Workflows\Tasks\HtmlInput;
-use the42coders\Workflows\Tasks\HttpStatus;
-use the42coders\Workflows\Tasks\PregReplace;
-use the42coders\Workflows\Tasks\SendMail;
-use the42coders\Workflows\Tasks\Task;
-use the42coders\Workflows\Triggers\ObserverTrigger;
-use the42coders\Workflows\Workflow;
+use mohammed_aldarwish\Workflows\DataBuses\DataBus;
+use mohammed_aldarwish\Workflows\Loggers\WorkflowLog;
+use mohammed_aldarwish\Workflows\Tasks\DomPDF;
+use mohammed_aldarwish\Workflows\Tasks\Execute;
+use mohammed_aldarwish\Workflows\Tasks\HtmlInput;
+use mohammed_aldarwish\Workflows\Tasks\HttpStatus;
+use mohammed_aldarwish\Workflows\Tasks\PregReplace;
+use mohammed_aldarwish\Workflows\Tasks\SendMail;
+use mohammed_aldarwish\Workflows\Tasks\Task;
+use mohammed_aldarwish\Workflows\Triggers\ObserverTrigger;
+use mohammed_aldarwish\Workflows\Workflow;
 
 class TasksTest extends TestCase
 {
@@ -21,7 +21,7 @@ class TasksTest extends TestCase
     {
         $workflow = Workflow::create(['name' => 'TestWorkflow']);
         $trigger = ObserverTrigger::create([
-            'type' => 'the42coders\Workflows\Triggers\ObserverTrigger',
+            'type' => 'mohammed_aldarwish\Workflows\Triggers\ObserverTrigger',
             'name' => 'ObserverTrigger',
             'queueable' => 1,
             'data_fields' => '{}',
@@ -31,11 +31,11 @@ class TasksTest extends TestCase
         ]);
         $task = Task::create([
             'workflow_id' => $workflow->id,
-            'type' => 'the42coders\Workflows\Tasks\HttpStatus',
+            'type' => 'mohammed_aldarwish\Workflows\Tasks\HttpStatus',
             'name' => 'HttpStatus',
             'data_fields' => '{
 	"url": {
-		"type": "the42coders\\Workflows\\DataBuses\\ValueResource",
+		"type": "mohammed_aldarwish\\Workflows\\DataBuses\\ValueResource",
 		"value": "https://42coders.com"
 	},
 	"description": {
@@ -58,23 +58,23 @@ class TasksTest extends TestCase
 
         $taskChild = Task::create([
             'workflow_id' => $workflow->id,
-            'type' => 'the42coders\Workflows\Tasks\SendMail',
+            'type' => 'mohammed_aldarwish\Workflows\Tasks\SendMail',
             'name' => 'SendMail',
             'data_fields' => '{
 	"sender": {
-		"type": "the42coders\\Workflows\\DataBuses\\ValueResource",
+		"type": "mohammed_aldarwish\\Workflows\\DataBuses\\ValueResource",
 		"value": "system@42coders.com"
 	},
 	"content": {
-		"type": "the42coders\\Workflows\\DataBuses\\ValueResource",
+		"type": "mohammed_aldarwish\\Workflows\\DataBuses\\ValueResource",
 		"value": "The content of the Mail"
 	},
 	"subject": {
-		"type": "the42coders\\Workflows\\DataBuses\\ValueResource",
+		"type": "mohammed_aldarwish\\Workflows\\DataBuses\\ValueResource",
 		"value": "Testing the Package"
 	},
 	"recipients": {
-		"type": "the42coders\\Workflows\\DataBuses\\ValueResource",
+		"type": "mohammed_aldarwish\\Workflows\\DataBuses\\ValueResource",
 		"value": "max@42coders.com"
 	},
 	"description": {

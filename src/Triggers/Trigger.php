@@ -1,14 +1,14 @@
 <?php
 
-namespace the42coders\Workflows\Triggers;
+namespace mohammed_aldarwish\Workflows\Triggers;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
-use the42coders\Workflows\DataBuses\DataBus;
-use the42coders\Workflows\DataBuses\DataBussable;
-use the42coders\Workflows\Fields\Fieldable;
-use the42coders\Workflows\Jobs\ProcessWorkflow;
-use the42coders\Workflows\Loggers\WorkflowLog;
+use mohammed_aldarwish\Workflows\DataBuses\DataBus;
+use mohammed_aldarwish\Workflows\DataBuses\DataBussable;
+use mohammed_aldarwish\Workflows\Fields\Fieldable;
+use mohammed_aldarwish\Workflows\Jobs\ProcessWorkflow;
+use mohammed_aldarwish\Workflows\Loggers\WorkflowLog;
 
 class Trigger extends Model
 {
@@ -51,7 +51,7 @@ class Trigger extends Model
 
     public function children()
     {
-        return $this->morphMany('the42coders\Workflows\Tasks\Task', 'parentable');
+        return $this->morphMany('mohammed_aldarwish\Workflows\Tasks\Task', 'parentable');
     }
 
     /**

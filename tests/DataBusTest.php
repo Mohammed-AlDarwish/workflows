@@ -1,9 +1,9 @@
 <?php
 
-namespace the42coders\Workflows\Tests;
+namespace mohammed_aldarwish\Workflows\Tests;
 
-use the42coders\Workflows\DataBuses\DataBus;
-use the42coders\Workflows\Tasks\Task;
+use mohammed_aldarwish\Workflows\DataBuses\DataBus;
+use mohammed_aldarwish\Workflows\Tasks\Task;
 
 class DataBusTest extends TestCase
 {

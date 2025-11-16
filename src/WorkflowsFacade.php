@@ -1,11 +1,11 @@
 <?php
 
-namespace the42coders\Workflows;
+namespace mohammed_aldarwish\Workflows;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see the42coders\Workflows\Skeleton\SkeletonClass
+ * @see mohammed_aldarwish\Workflows\Skeleton\SkeletonClass
  */
 class WorkflowsFacade extends Facade
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace the42coders\Workflows\Tests;
+namespace mohammed_aldarwish\Workflows\Tests;
 
-use the42coders\Workflows\Loggers\WorkflowLog;
-use the42coders\Workflows\Tasks\Task;
-use the42coders\Workflows\Triggers\ObserverTrigger;
-use the42coders\Workflows\Workflow;
-use the42coders\Workflows\Workflows;
+use mohammed_aldarwish\Workflows\Loggers\WorkflowLog;
+use mohammed_aldarwish\Workflows\Tasks\Task;
+use mohammed_aldarwish\Workflows\Triggers\ObserverTrigger;
+use mohammed_aldarwish\Workflows\Workflow;
+use mohammed_aldarwish\Workflows\Workflows;
 
 class WorkflowTest extends TestCase
 {
@@ -14,7 +14,7 @@ class WorkflowTest extends TestCase
     {
         $workflow = Workflow::create(['name' => 'TestWorkflow']);
         $trigger = ObserverTrigger::create([
-            'type' => 'the42coders\Workflows\Triggers\ObserverTrigger',
+            'type' => 'mohammed_aldarwish\Workflows\Triggers\ObserverTrigger',
             'name' => 'ObserverTrigger',
             'queueable' => 1,
             'data_fields' => '{}',
@@ -24,11 +24,11 @@ class WorkflowTest extends TestCase
         ]);
         $task = Task::create([
             'workflow_id' => $workflow->id,
-            'type' => 'the42coders\Workflows\Tasks\HttpStatus',
+            'type' => 'mohammed_aldarwish\Workflows\Tasks\HttpStatus',
             'name' => 'HttpStatus',
             'data_fields' => '{
 	"url": {
-		"type": "the42coders\\Workflows\\DataBuses\\ValueResource",
+		"type": "mohammed_aldarwish\\Workflows\\DataBuses\\ValueResource",
 		"value": "https://42coders.com"
 	},
 	"description": {

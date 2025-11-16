@@ -1,10 +1,10 @@
 <?php
 
-namespace the42coders\Workflows\Triggers;
+namespace mohammed_aldarwish\Workflows\Triggers;
 
 use Illuminate\Database\Eloquent\Model;
-use the42coders\Workflows\Fields\DropdownField;
-use the42coders\Workflows\Workflow;
+use mohammed_aldarwish\Workflows\Fields\DropdownField;
+use mohammed_aldarwish\Workflows\Workflow;
 
 class ButtonTrigger extends Trigger
 {

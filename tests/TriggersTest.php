@@ -1,9 +1,9 @@
 <?php
 
-namespace the42coders\Workflows\Tests;
+namespace mohammed_aldarwish\Workflows\Tests;
 
-use the42coders\Workflows\Triggers\ObserverTrigger;
-use the42coders\Workflows\Triggers\Trigger;
+use mohammed_aldarwish\Workflows\Triggers\ObserverTrigger;
+use mohammed_aldarwish\Workflows\Triggers\Trigger;
 
 class TriggersTest extends TestCase
 {

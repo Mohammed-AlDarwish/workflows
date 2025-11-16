@@ -1,6 +1,6 @@
 <?php
 
-namespace the42coders\Workflows\Notifications;
+namespace mohammed_aldarwish\Workflows\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Messages\SlackMessage;

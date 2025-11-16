@@ -1,8 +1,8 @@
 <?php
 
-namespace the42coders\Workflows\Tests;
+namespace mohammed_aldarwish\Workflows\Tests;
 
-use the42coders\Workflows\WorkflowsServiceProvider;
+use mohammed_aldarwish\Workflows\WorkflowsServiceProvider;
 
 class BaseTest extends TestCase
 {

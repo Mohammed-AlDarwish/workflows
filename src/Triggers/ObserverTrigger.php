@@ -1,8 +1,8 @@
 <?php
 
-namespace the42coders\Workflows\Triggers;
+namespace mohammed_aldarwish\Workflows\Triggers;
 
-use the42coders\Workflows\Fields\DropdownField;
+use mohammed_aldarwish\Workflows\Fields\DropdownField;
 
 class ObserverTrigger extends Trigger
 {

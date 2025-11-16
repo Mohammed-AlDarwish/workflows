@@ -1,9 +1,9 @@
 <?php
 
-namespace the42coders\Workflows\Tasks;
+namespace mohammed_aldarwish\Workflows\Tasks;
 
 use Illuminate\Database\Eloquent\Model;
-use the42coders\Workflows\DataBuses\DataBus;
+use mohammed_aldarwish\Workflows\DataBuses\DataBus;
 
 interface TaskInterface
 {

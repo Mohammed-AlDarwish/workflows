@@ -1,6 +1,6 @@
 <?php
 
-namespace the42coders\Workflows\Tasks;
+namespace mohammed_aldarwish\Workflows\Tasks;
 
 use Illuminate\Support\Facades\Artisan;
 

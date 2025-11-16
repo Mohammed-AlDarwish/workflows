@@ -1,6 +1,6 @@
 <?php
 
-namespace the42coders\Workflows;
+namespace mohammed_aldarwish\Workflows;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -22,17 +22,17 @@ class Workflow extends Model
 
     public function tasks()
     {
-        return $this->hasMany('the42coders\Workflows\Tasks\Task');
+        return $this->hasMany('mohammed_aldarwish\Workflows\Tasks\Task');
     }
 
     public function triggers()
     {
-        return $this->hasMany('the42coders\Workflows\Triggers\Trigger');
+        return $this->hasMany('mohammed_aldarwish\Workflows\Triggers\Trigger');
     }
 
     public function logs()
     {
-        return $this->hasMany('the42coders\Workflows\Loggers\WorkflowLog');
+        return $this->hasMany('mohammed_aldarwish\Workflows\Loggers\WorkflowLog');
     }
 
     public function getTriggerByClass($class)

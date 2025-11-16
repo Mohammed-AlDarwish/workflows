@@ -1,8 +1,8 @@
 <?php
 
-namespace the42coders\Workflows\Tests;
+namespace mohammed_aldarwish\Workflows\Tests;
 
-use the42coders\Workflows\Loggers\TaskLog;
+use mohammed_aldarwish\Workflows\Loggers\TaskLog;
 
 class TaskLogTest extends TestCase
 {

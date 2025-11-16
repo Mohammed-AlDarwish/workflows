@@ -1,11 +1,11 @@
 <?php
 
-namespace the42coders\Workflows\Loggers;
+namespace mohammed_aldarwish\Workflows\Loggers;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
-use the42coders\Workflows\DataBuses\DataBus;
-use the42coders\Workflows\Triggers\WorkflowObservable;
+use mohammed_aldarwish\Workflows\DataBuses\DataBus;
+use mohammed_aldarwish\Workflows\Triggers\WorkflowObservable;
 
 class WorkflowLog extends Model
 {
@@ -44,12 +44,12 @@ class WorkflowLog extends Model
 
     public function workflow()
     {
-        return $this->belongsTo('the42coders\Workflows\Workflow');
+        return $this->belongsTo('mohammed_aldarwish\Workflows\Workflow');
     }
 
     public function taskLogs()
     {
-        return $this->hasMany('the42coders\Workflows\Loggers\TaskLog');
+        return $this->hasMany('mohammed_aldarwish\Workflows\Loggers\TaskLog');
     }
 
     public function elementable()

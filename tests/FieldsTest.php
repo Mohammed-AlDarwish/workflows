@@ -1,6 +1,6 @@
 <?php
 
-namespace the42coders\Workflows\Tests;
+namespace mohammed_aldarwish\Workflows\Tests;
 
 class FieldsTest extends TestCase
 {

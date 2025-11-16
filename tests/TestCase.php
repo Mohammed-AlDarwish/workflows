@@ -1,9 +1,9 @@
 <?php
 
-namespace the42coders\Workflows\Tests;
+namespace mohammed_aldarwish\Workflows\Tests;
 
-use the42coders\Workflows\Workflows;
-use the42coders\Workflows\WorkflowsServiceProvider;
+use mohammed_aldarwish\Workflows\Workflows;
+use mohammed_aldarwish\Workflows\WorkflowsServiceProvider;
 
 abstract class TestCase extends \Orchestra\Testbench\TestCase
 {

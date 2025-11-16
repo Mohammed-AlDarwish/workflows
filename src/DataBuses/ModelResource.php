@@ -1,6 +1,6 @@
 <?php
 
-namespace the42coders\Workflows\DataBuses;
+namespace mohammed_aldarwish\Workflows\DataBuses;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Schema;

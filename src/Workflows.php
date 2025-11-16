@@ -1,6 +1,6 @@
 <?php
 
-namespace the42coders\Workflows;
+namespace mohammed_aldarwish\Workflows;
 
 use Illuminate\Support\Facades\Route;
 

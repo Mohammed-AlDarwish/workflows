@@ -1,9 +1,9 @@
 # Workflows add Drag & Drop automation's to your Laravel application.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/the42coders/workflows.svg?style=flat-square)](https://packagist.org/packages/the42coders/workflows)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/mohammed_aldarwish/workflows.svg?style=flat-square)](https://packagist.org/packages/mohammed_aldarwish/workflows)
 [![Build Status](https://img.shields.io/travis/42coders/workflows/master.svg?style=flat-square)](https://travis-ci.org/42coders/workflows)
 [![Quality Score](https://github.styleci.io/repos/295739465/shield)](https://github.styleci.io/repos/295739465/shield)
-[![Total Downloads](https://img.shields.io/packagist/dt/the42coders/workflows.svg?style=flat-square)](https://packagist.org/packages/the42coders/workflows)
+[![Total Downloads](https://img.shields.io/packagist/dt/mohammed_aldarwish/workflows.svg?style=flat-square)](https://packagist.org/packages/mohammed_aldarwish/workflows)
 
 ![Logo](https://github.com/42coders/workflows/blob/master/resources/img/42workflows.png?raw=true)
 
@@ -25,7 +25,7 @@ If you are interested in news and updates
 You can install the package via composer:
 
 ```bash
-composer require the42coders/workflows
+composer require mohammed_aldarwish/workflows
 ```
 
 You need to register the routes to your web.php routes File as well.
@@ -34,14 +34,14 @@ you use in the rest of your app.
 
 ```php
 Route::group(['middleware' => ['auth']], function () {
-    \the42coders\Workflows\Workflows::routes();
+    \mohammed_aldarwish\Workflows\Workflows::routes();
 });
 ```
 
 You need to publish the assets of the Package
 
 ```bash
-php artisan vendor:publish --provider="the42coders\Workflows\WorkflowsServiceProvider"  --tag=assets  
+php artisan vendor:publish --provider="mohammed_aldarwish\Workflows\WorkflowsServiceProvider"  --tag=assets  
 ```
 
 Other publishable Contents are
@@ -49,19 +49,19 @@ Other publishable Contents are
 config
 
 ```bash
-php artisan vendor:publish --provider="the42coders\Workflows\WorkflowsServiceProvider"  --tag=config  
+php artisan vendor:publish --provider="mohammed_aldarwish\Workflows\WorkflowsServiceProvider"  --tag=config  
 ```
 
 language
 
 ```bash
-php artisan vendor:publish --provider="the42coders\Workflows\WorkflowsServiceProvider"  --tag=lang  
+php artisan vendor:publish --provider="mohammed_aldarwish\Workflows\WorkflowsServiceProvider"  --tag=lang  
 ```
 
 views
 
 ```bash
-php artisan vendor:publish --provider="the42coders\Workflows\WorkflowsServiceProvider"  --tag=views  
+php artisan vendor:publish --provider="mohammed_aldarwish\Workflows\WorkflowsServiceProvider"  --tag=views  
 ```
 
 ## Usage
@@ -102,19 +102,19 @@ You have multiple ways of rendering ButtonTrigger.
 
 ##### ByName
 ``` php
- {!! the42coders\Workflows\Triggers\ButtonTrigger::renderButtonByName('name', $model) !!}
+ {!! mohammed_aldarwish\Workflows\Triggers\ButtonTrigger::renderButtonByName('name', $model) !!}
 ```
 
 ##### ByWorkflowId
 ``` php
- {!! the42coders\Workflows\Triggers\ButtonTrigger::renderButtonByWorkflowId(workflow_id, $model) !!}
+ {!! mohammed_aldarwish\Workflows\Triggers\ButtonTrigger::renderButtonByWorkflowId(workflow_id, $model) !!}
 ```
 
 ##### ByCategory
 This will return all Triggers from the Category.
 
 ``` php
- {!! the42coders\Workflows\Triggers\ButtonTrigger::renderButtonsByCategory('categoryName', $model) !!}
+ {!! mohammed_aldarwish\Workflows\Triggers\ButtonTrigger::renderButtonsByCategory('categoryName', $model) !!}
 ```
 
 

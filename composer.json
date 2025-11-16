@@ -1,5 +1,5 @@
 {
-    "name": "the42coders/workflows",
+    "name": "mohammed_aldarwish/workflows",
     "description": "This Package allows you to automate your Laravel Application from your Backend.",
     "keywords": [
         "42coders",
@@ -28,12 +28,12 @@
     },
     "autoload": {
         "psr-4": {
-            "the42coders\\Workflows\\": "src"
+            "mohammed_aldarwish\\Workflows\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "the42coders\\Workflows\\Tests\\": "tests"
+            "mohammed_aldarwish\\Workflows\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -47,10 +47,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "the42coders\\Workflows\\WorkflowsServiceProvider"
+                "mohammed_aldarwish\\Workflows\\WorkflowsServiceProvider"
             ],
             "aliases": {
-                "Workflows": "the42coders\\Workflows\\WorkflowsFacade"
+                "Workflows": "mohammed_aldarwish\\Workflows\\WorkflowsFacade"
             }
         }
     }

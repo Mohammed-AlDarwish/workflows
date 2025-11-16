@@ -1,8 +1,8 @@
 <?php
 
-namespace the42coders\Workflows\Triggers;
+namespace mohammed_aldarwish\Workflows\Triggers;
 
-use the42coders\Workflows\Loggers\WorkflowLog;
+use mohammed_aldarwish\Workflows\Loggers\WorkflowLog;
 
 class ReRunTrigger
 {

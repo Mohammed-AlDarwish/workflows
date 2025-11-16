@@ -2,7 +2,6 @@
 
 namespace the42coders\Workflows;
 
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
 
 class WorkflowsServiceProvider extends ServiceProvider
@@ -61,7 +60,7 @@ class WorkflowsServiceProvider extends ServiceProvider
             return new Workflows;
         });
 
-        App::register(\Barryvdh\DomPDF\ServiceProvider::class);
+        $this->app->register(\Barryvdh\DomPDF\ServiceProvider::class);
         //App::register(\Guzz)
     }
 }
